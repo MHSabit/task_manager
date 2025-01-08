@@ -44,13 +44,12 @@ userController.signIn = async (req, res) => {
     }
     const acessToken = await userUtility.generateAccressToken(user);
     const refreshToken = await userUtility.generateRefreshToken(user);
-    
-    const token = {
-        acessToken,
-        refreshToken
-    }
-    console.log(token);
-    res.send(token);
+    const responsePayload = {
+        user: user,
+        acessToken: acessToken,
+        refreshToken: refreshToken
+    };
+    res.send(responsePayload);
 }
 
 userController.signOut = (req, res) => {

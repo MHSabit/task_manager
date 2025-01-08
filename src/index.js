@@ -7,6 +7,7 @@ connectDB();
 
 // require routes
 const userRoutes = require("./Module/UserManagement/userRoutes");
+const taskRoute = require("./Module/TaskManagement/taskRoute");
 
 app.use(express.json());
 
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
 
 
 app.use('/user', userRoutes);
+app.use('/task', taskRoute);
 
 
 app.listen(port, () => {
