@@ -33,24 +33,22 @@ const taskSchema = new Schema({
         required: true,
         default: 'Pending'
     },
-    // CreatedByUser: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'User',
-    //     required: true,
-    //     default: null
-    // },
-    // assignedTo: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'User',
-    //     required: true,
-    //     default: null
-    // },
-    // priority: {
-    //     type: String,
-    //     required: true,
-    //     enum: ['Low', 'Medium', 'High'],
-    //     default: 'Low'
-    // }
+    CreatedByUser: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
+    assignedTo: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        default: null
+    },
+    priority: {
+        type: String,
+        required: true,
+        enum: ['Low', 'Medium', 'High'],
+        default: 'Low'
+    }
 });
 
 const TaskModel = mongoose.model("Task", taskSchema);

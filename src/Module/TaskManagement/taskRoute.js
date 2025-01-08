@@ -8,8 +8,11 @@ taskRoute.get('/', (req, res) => {
 // create a task
 taskRoute.post('/', taskController.createTask);
 
+// update a task
+taskRoute.put('/:id', taskController.updateTask);
 
-
+// delete a task
+taskRoute.delete('/:id', taskController.deleteTask);
 
 
 module.exports = taskRoute;

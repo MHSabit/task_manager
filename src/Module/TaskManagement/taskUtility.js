@@ -2,9 +2,8 @@ const jwt = require('jsonwebtoken');
 
 const taskUtility = {};
 
-taskUtility.userInfo =(token)=> {
+taskUtility.userInfoByAccessToken = (token) => {
     const user = jwt.decode(token);
-    console.log(user);
     return user;
 }
 

@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "3a770869-865c-47c2-881a-0753e8bc86b0",
+		"name": "Task_Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14956267"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "User Signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"tusher\",\r\n    \"email\" :\"tusher@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/user/signin"
+					},
+					"response": []
+				},
+				{
+					"name": "Generate-Access-Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\" :\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Njk1YWY2MjRmODJmNTY1YTJjNGFjMiIsIm5hbWUiOiJzYWJpdCIsImVtYWlsIjoic2FiaXRAZ21haWwuY29tIiwiaWF0IjoxNzM0OTU3ODI0LCJleHAiOjE3MzQ5NjE0MjR9.o-0mF2JeextYvcIuCKx3bYmTA6X46jtIRqcWujtinpY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/user/generate-access-token"
+					},
+					"response": []
+				},
+				{
+					"name": "User Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTAzZmIzOWJmYTg3OGVkZWVmOWQ3NSIsIm5hbWUiOiJzaWFtIiwiZW1haWwiOiJzaWFtQGdtYWlsLmNvbSIsImlhdCI6MTczMzMxMjQ0MSwiZXhwIjoxNzMzMzEzMzQxfQ.x-FUMwwttA6W_9zdNLs64q6feT4u31815QP7B6ydQ3g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"tusher\",\r\n    \"email\" :\"tusher@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/user/signup"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "task",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTAzZmIzOWJmYTg3OGVkZWVmOWQ3NSIsIm5hbWUiOiJzaWFtIiwiZW1haWwiOiJzaWFtQGdtYWlsLmNvbSIsImlhdCI6MTczMzMxMjQ0MSwiZXhwIjoxNzMzMzEzMzQxfQ.x-FUMwwttA6W_9zdNLs64q6feT4u31815QP7B6ydQ3g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"siam\",\r\n    \"email\" :\"sss@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/task"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3N2U1YjVhOTQ3MTBiYmEwY2VkZjQ5MSIsIm5hbWUiOiJ0dXNoZXIiLCJlbWFpbCI6InR1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MzYzMzQxNzUsImV4cCI6MTczNjMzNzc3NX0.iseKMWH8HvQRv_7XstpC2HEvzmMwfbLByPfPwliBmgY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"task 01\",\r\n    \"description\" :\"task description task descriptiontask descriptiontask descriptiontask descriptiontask description \", \r\n    \"status\": \"Back Log\",\r\n    \"priority\" : \"Low\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/task"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3N2U1YjVhOTQ3MTBiYmEwY2VkZjQ5MSIsIm5hbWUiOiJ0dXNoZXIiLCJlbWFpbCI6InR1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MzYzMzQxNzUsImV4cCI6MTczNjMzNzc3NX0.iseKMWH8HvQRv_7XstpC2HEvzmMwfbLByPfPwliBmgY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"task 01\",\r\n    \"description\" :\"task description task descriptiontask descriptiontask descriptiontask descriptiontask description \", \r\n    \"status\": \"Back Log\",\r\n    \"priority\" : \"Medium\",\r\n    \"assignedTo\" : \"677e5b5a94710bba0cedf491\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/task/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3N2U1YjVhOTQ3MTBiYmEwY2VkZjQ5MSIsIm5hbWUiOiJ0dXNoZXIiLCJlbWFpbCI6InR1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MzYzMzQxNzUsImV4cCI6MTczNjMzNzc3NX0.iseKMWH8HvQRv_7XstpC2HEvzmMwfbLByPfPwliBmgY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"task99\",\r\n    \"description\" :\"  task descriptiontask descriptiontask descriptiontask descriptiontask description \", \r\n    \"status\": \"Back Log\",\r\n    \"priority\" : \"Medium\",\r\n    \"assignedTo\" : \"677e5b5a94710bba0cedf491\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/task/677e8ce08aa50c13c5b96aa0"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

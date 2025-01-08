@@ -19,7 +19,6 @@ userController.siginUp = async (req, res) => {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
         }
-        console.log(user);
         const createUser = await UserModel.create(user);
         res.send(createUser);
     }
