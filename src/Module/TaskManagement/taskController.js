@@ -33,5 +33,25 @@ taskController.deleteTask = async (req, res) => {
     res.send(deleteTask);
 }
 
+// get all tasks
+taskController.getAllTasks = async (req, res) => {
+    const tasks = await TaskModel.find();
+    console.log(tasks);
+    res.send(tasks);
+}
+
+// get task by id
+taskController.getTaskById = async (req, res) => {
+    const task  = await TaskModel.findById(req.params.id); 
+    res.send(task);
+}
+
+
+// get task created by user
+taskController.getTaskCreatedByUser = async (req, res) => {
+    const tasks = await TaskModel.find({ CreatedByUser: req.params.id });
+    res.send(tasks);
+};
+
 
 module.exports = taskController;
