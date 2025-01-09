@@ -29,7 +29,7 @@ Token.generateRefreshToken = async (user) => {
         userPayload = {
             id: user._id,
             name: user.name,
-            email: user.email
+            email: user.email 
         }
         const token = jwt.sign(
             userPayload,
@@ -43,4 +43,14 @@ Token.generateRefreshToken = async (user) => {
         console.log(error);
     }
 }
+
+Token.verifyRefreshToken = (token) => {
+    if (!process.env.REFRESH_Token_SECRET) {
+        throw new Error('JWT_REFRESH_TOKEN_SECRET is not defined in environment variables');
+    }
+    return jwt.verify(token, process.env.REFRESH_Token_SECRET);
+};
+
+
+
 module.exports = Token;

@@ -8,7 +8,11 @@ router.get('/', (req, res) => {
 
 router.post('/signup', userController.siginUp);
 router.post('/signin', userController.signIn);
-router.post('/signout', userController.signOut);
+router.get('/signout', userController.signOut);
+router.post('/checkOAuth', userController.checkOAuth);
+router.post('/generate-access-token', userController.generateAccessToken);
+
+
 
 router.get('/allusers', userController.getAllUsers);
 
