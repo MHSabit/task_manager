@@ -11,7 +11,6 @@ taskController.createTask = async (req, res) => {
             ...req.body,
             CreatedByUser: user.id
         };
-        console.log(taskPayload);
         const createTask = await TaskModel.create(taskPayload);
         res.send(createTask);
     }
@@ -23,20 +22,35 @@ taskController.createTask = async (req, res) => {
 
 // update a task
 taskController.updateTask = async (req, res) => {
-    const updateTask = await TaskModel.findByIdAndUpdate(req.params.id, req.body, {new: true});
-    res.send(updateTask);
+    try {
+
+        if(req.params.id){
+            const updateTask = await TaskModel.findByIdAndUpdate(req.params.id, req.body, {new: true});
+            res.send(updateTask);
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+
 }
 
 // delete a task
 taskController.deleteTask = async (req, res) => {
-    const deleteTask = await TaskModel.findByIdAndDelete(req.params.id);
-    res.send(deleteTask);
+    try {
+        if(req.params.id){
+            const deleteTask = await TaskModel.findByIdAndDelete(req.params.id);
+            res.send(deleteTask);
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
 
 // get all tasks
 taskController.getAllTasks = async (req, res) => {
     const tasks = await TaskModel.find();
-    console.log(tasks);
     res.send(tasks);
 }
 

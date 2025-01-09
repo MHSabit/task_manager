@@ -29,7 +29,7 @@ const taskSchema = new Schema({
     },
     status: {
         type: String,
-        enum: ['Back Log', 'In Progress', 'Code Review', 'QA Review',  'Completed', 'Closed'],
+        enum: ['ToDo', 'Progress', 'complete'],
         required: true,
         default: 'Pending'
     },

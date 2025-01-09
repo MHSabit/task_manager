@@ -5,7 +5,6 @@ const Token = {};
 
 Token.generateAccressToken = async (user) => {
     try{
-        // console.log(user);
         userPayload = {
             id: user._id,
             name: user.name,
@@ -16,7 +15,6 @@ Token.generateAccressToken = async (user) => {
             process.env.ACCESS_Token_SECRET,
             {expiresIn: '1h'}
         );
-        // console.log(token);
         return token;
          
     }
@@ -28,7 +26,6 @@ Token.generateAccressToken = async (user) => {
 
 Token.generateRefreshToken = async (user) => {
     try{
-        // console.log(user);
         userPayload = {
             id: user._id,
             name: user.name,
@@ -39,12 +36,11 @@ Token.generateRefreshToken = async (user) => {
             process.env.REFRESH_Token_SECRET,
             {expiresIn: '1h'}
         );
-        // console.log(token);
         return token;
          
     }
     catch(error){
-        // console.log(error);
+        console.log(error);
     }
 }
 module.exports = Token;
