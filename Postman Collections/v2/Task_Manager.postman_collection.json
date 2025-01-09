@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "3a770869-865c-47c2-881a-0753e8bc86b0",
 		"name": "Task_Manager",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "14956267"
 	},
 	"item": [
@@ -35,7 +35,57 @@
 								}
 							}
 						},
-						"url": "localhost:3000/user/signin"
+						"url": {
+							"raw": "localhost:3000/user/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Signin Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"tusher\",\r\n    \"email\" :\"tusher@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signin"
+							]
+						}
 					},
 					"response": []
 				},
@@ -65,7 +115,17 @@
 								}
 							}
 						},
-						"url": "localhost:3000/user/generate-access-token"
+						"url": {
+							"raw": "localhost:3000/user/generate-access-token",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"generate-access-token"
+							]
+						}
 					},
 					"response": []
 				},
@@ -93,14 +153,205 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"tusher\",\r\n    \"email\" :\"tusher@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"sabit\",\r\n    \"email\" :\"ss@gmail.com\", \r\n    \"password\": \"123456789\",\r\n    \"role\": \"user\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:3000/user/signup"
+						"url": {
+							"raw": "localhost:3000/user/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Oauth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3N2U1YjVhOTQ3MTBiYmEwY2VkZjQ5MSIsIm5hbWUiOiJ0dXNoZXIiLCJlbWFpbCI6InR1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MzYzMzQxNzUsImV4cCI6MTczNjMzNzc3NX0.iseKMWH8HvQRv_7XstpC2HEvzmMwfbLByPfPwliBmgY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"task 01\",\r\n    \"description\" :\"task description task descriptiontask descriptiontask descriptiontask descriptiontask description \", \r\n    \"status\": \"Back Log\",\r\n    \"priority\" : \"Medium\",\r\n    \"assignedTo\" : \"677e5b5a94710bba0cedf491\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/task/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate-access-token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3N2U1YjVhOTQ3MTBiYmEwY2VkZjQ5MSIsIm5hbWUiOiJ0dXNoZXIiLCJlbWFpbCI6InR1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MzYzMzQxNzUsImV4cCI6MTczNjMzNzc3NX0.iseKMWH8HvQRv_7XstpC2HEvzmMwfbLByPfPwliBmgY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\" : \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/generate-access-token",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"generate-access-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Signup Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTAzZmIzOWJmYTg3OGVkZWVmOWQ3NSIsIm5hbWUiOiJzaWFtIiwiZW1haWwiOiJzaWFtQGdtYWlsLmNvbSIsImlhdCI6MTczMzMxMjQ0MSwiZXhwIjoxNzMzMzEzMzQxfQ.x-FUMwwttA6W_9zdNLs64q6feT4u31815QP7B6ydQ3g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"tusher\",\r\n    \"email\" :\"tusher02@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"tusher\",\r\n    \"email\" :\"tusher05@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/alluser",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"alluser"
+							]
+						}
 					},
 					"response": []
 				}
@@ -143,7 +394,159 @@
 								}
 							}
 						},
-						"url": "localhost:3000/task"
+						"url": {
+							"raw": "localhost:3000/task",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all task",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTAzZmIzOWJmYTg3OGVkZWVmOWQ3NSIsIm5hbWUiOiJzaWFtIiwiZW1haWwiOiJzaWFtQGdtYWlsLmNvbSIsImlhdCI6MTczMzMxMjQ0MSwiZXhwIjoxNzMzMzEzMzQxfQ.x-FUMwwttA6W_9zdNLs64q6feT4u31815QP7B6ydQ3g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"siam\",\r\n    \"email\" :\"sss@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/task",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTAzZmIzOWJmYTg3OGVkZWVmOWQ3NSIsIm5hbWUiOiJzaWFtIiwiZW1haWwiOiJzaWFtQGdtYWlsLmNvbSIsImlhdCI6MTczMzMxMjQ0MSwiZXhwIjoxNzMzMzEzMzQxfQ.x-FUMwwttA6W_9zdNLs64q6feT4u31815QP7B6ydQ3g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"siam\",\r\n    \"email\" :\"sss@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/task/677e94233d99ab085d606d8a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"677e94233d99ab085d606d8a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task Createdby id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTAzZmIzOWJmYTg3OGVkZWVmOWQ3NSIsIm5hbWUiOiJzaWFtIiwiZW1haWwiOiJzaWFtQGdtYWlsLmNvbSIsImlhdCI6MTczMzMxMjQ0MSwiZXhwIjoxNzMzMzEzMzQxfQ.x-FUMwwttA6W_9zdNLs64q6feT4u31815QP7B6ydQ3g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"siam\",\r\n    \"email\" :\"sss@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/task/677e94233d99ab085d606d8a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"677e94233d99ab085d606d8a"
+							]
+						}
 					},
 					"response": []
 				},
@@ -178,7 +581,16 @@
 								}
 							}
 						},
-						"url": "localhost:3000/task"
+						"url": {
+							"raw": "localhost:3000/task",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task"
+							]
+						}
 					},
 					"response": []
 				},
@@ -213,7 +625,62 @@
 								}
 							}
 						},
-						"url": "localhost:3000/task/"
+						"url": {
+							"raw": "localhost:3000/task/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Task Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3N2U1YjVhOTQ3MTBiYmEwY2VkZjQ5MSIsIm5hbWUiOiJ0dXNoZXIiLCJlbWFpbCI6InR1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MzYzMzQxNzUsImV4cCI6MTczNjMzNzc3NX0.iseKMWH8HvQRv_7XstpC2HEvzmMwfbLByPfPwliBmgY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"task 01\",\r\n    \"description\" :\"task description task descriptiontask descriptiontask descriptiontask descriptiontask description \", \r\n    \"status\": \"Back Log\",\r\n    \"priority\" : \"Medium\",\r\n    \"assignedTo\" : \"677e5b5a94710bba0cedf491\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/task/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								""
+							]
+						}
 					},
 					"response": []
 				},
@@ -248,7 +715,17 @@
 								}
 							}
 						},
-						"url": "localhost:3000/task/677e8ce08aa50c13c5b96aa0"
+						"url": {
+							"raw": "localhost:3000/task/677e8ce08aa50c13c5b96aa0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"677e8ce08aa50c13c5b96aa0"
+							]
+						}
 					},
 					"response": []
 				}
